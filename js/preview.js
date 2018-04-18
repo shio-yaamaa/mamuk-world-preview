@@ -46,6 +46,6 @@ setWheelListener();
 setWindowListener();
 
 const updateBackgroundImage = imageSrc => {
-  worldBackground.material.map = THREE.ImageUtils.loadTexture(imageSrc);
+  worldBackground.material.map = new THREE.TextureLoader().load(event.target.result);
   worldBackground.material.needsUpdate = true;
 };

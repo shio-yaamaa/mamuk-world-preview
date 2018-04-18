@@ -37,5 +37,7 @@ const toggleValidateError = function(show, message) {
 const createImage = (file, callback) => {
   const fileReader = new FileReader();
   fileReader.readAsDataURL(file);
-  fileReader.onload = event => callback(event.target.result);
+  fileReader.onload = event => {
+    callback(event.target.result);
+  };
 };
